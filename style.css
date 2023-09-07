@@ -1,0 +1,593 @@
+*
+{
+    margin: 00;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+body
+{
+    background: #f1f1f1;
+}
+nav
+{
+    background:#1876f2 ;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+nav .container
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    padding-right: 40px;
+}
+nav .container .left-nav
+{
+    display: flex;
+    align-items: center;
+}
+nav .container .left-nav .logo 
+{
+    display: flex;
+    align-items: center;
+    padding-right: 20px;
+}
+nav .container .left-nav .logo img
+{
+    height: 50px;
+    width: 50px;
+}
+nav .container .left-nav .logo h1
+{
+    color: #fff;
+}
+nav .container .left-nav .notification
+{
+    display: flex;
+}
+nav .container .left-nav .notification a
+{
+    padding: 10px;
+}
+nav .container .left-nav .notification a img
+{
+    height: 30px;
+}
+nav .container .right-nav
+{
+    display: flex;
+    align-items: center;
+}
+nav .container .right-nav .search
+{
+    position: relative;
+}
+nav .container .right-nav input
+{
+    width: 400px;
+    padding: 8px 35px;
+    border-radius: 25px;
+    outline: none;
+    overflow: none;
+    border: none;
+    margin-right: 10px;
+}
+nav .container .right-nav .search label
+{
+    position: absolute;
+    left: 10px;
+    top: 5px;
+}
+nav .container .right-nav .search label img
+{
+    height:20px;
+    width: 20px;
+    cursor: pointer;
+}
+nav .container .right-nav img
+{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.profile
+{
+    position: relative;
+}
+.profile::after
+{
+    content: '';
+    height: 7px;
+    width: 7px;
+    background: rgb(16, 255, 16);
+    border: 2px solid #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+/* settings menu ----------------------------------- */
+.setting-menu 
+{
+    opacity: 0;
+    display: flex;
+    position: absolute;
+    width: 90%;
+    max-width: 300px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,.5);
+    border-radius: 4px;
+    overflow: hidden;
+    top: 104%;
+    right: 3%;
+    display: flex;
+    flex-direction: column;
+}
+.menu-options 
+{
+    display: flex;
+
+}
+.setting-menu img
+{
+    margin-right: 10px;
+}
+.menu-options 
+{
+    display: flex;
+    flex-direction: column;
+    padding: 0px 15px;
+}
+.menu-options .user-profile
+{
+    display: flex;
+    margin-top: 5px;
+    margin-left: 10px;
+}
+.menu-options a
+{
+    text-decoration: none;
+    font-size: .7rem;
+    color: #1876f2;
+}
+.menu-options hr
+{
+    margin: 5px 0;
+    border: none;
+    height: 1px;
+
+    background: #8a8a8a;
+}
+.menu-options .setting-link
+{
+    display: flex;
+    margin: 5px 10px;
+    align-items: center;
+    width: 100%;
+}
+.last-link
+{
+    padding-bottom:  10px;
+}
+.menu-options .setting-link .setting-icon
+{
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+.menu-options .setting-link a 
+{
+    font-size: .95rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1;
+    color: #626262;
+}
+.menu-options .setting-link a img
+{
+    width: 8px;
+    height: 10px;
+}
+#clicknav
+{
+    display: none;
+}
+
+
+/* .container ------------------------------------------------------- */
+.container
+{
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 3%;
+}
+.container .left-sidebar
+{
+    flex-basis: 21%;
+  /*   background: #b1d3ff; */
+    align-self: flex-start;
+    position: sticky;
+    top: 100px;
+}
+.container .right-sidebar
+{
+    flex-basis: 25%;
+   /*  background: #8f8f8f; */
+    align-self: flex-start;
+    position: sticky;
+    top: 100px;
+}
+.container .main-content
+{
+    flex-basis: 47%;
+    position: sticky;
+    top: 100px;
+}
+/* left-sidebar -----------------------------------------------------------------------------*/
+.left-sidebar .general
+{
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid #626262;
+}
+.left-sidebar p
+{
+    color: #656565;
+    padding-bottom: 10px;
+}
+.left-sidebar .general a
+{
+    display: inline-flex;
+    margin-bottom: 30px;
+    align-items: center;
+    text-decoration: none;
+    color: #636363;
+}
+.left-sidebar .general img
+{
+    width: 25px;
+    margin-right: 15px;
+}
+.your-shortcuts p
+{
+    padding-top: 10px;
+}
+.your-shortcuts .shortcuts
+{
+    display: flex;
+    flex-direction: column;
+}
+.your-shortcuts .shortcuts a
+{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    color: #656565;
+    text-decoration: none;
+}
+.your-shortcuts .shortcuts img
+{
+    height: 40px;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+/* main-content ---------------------------------------------------------------------------  */
+/* .main-content
+{
+   
+} */
+.main-content .story-list
+{
+    display: flex;
+    justify-content: space-between;
+}
+.main-content .story
+{
+    height: 200px;
+    width: 100px;
+    background-image: linear-gradient(transparent,rgba(0,0,0,.5)),url(/Images/Profile-pic-mandy.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    border-radius: 8px;
+}
+.main-content .mystory img
+{
+    top: 25px ;
+}
+.main-content .story img
+{
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    border: 3px solid #1876f2;
+    object-fit: cover;
+}
+.main-content .mystory img
+{
+    left: 30%;
+    top: 135px;
+    width: 40px;
+    height: 40px;
+    border: none;
+}
+.main-content .story p
+{
+    position: relative;
+    text-align: center;
+    padding-top: 175px;
+    color: #fff;
+}
+.main-content .story1
+{
+    background-image: linear-gradient(transparent,rgba(0,0,0,.5)),url(/Images/emma-story01.jpg);
+}
+.main-content .story2
+{
+    background-image: linear-gradient(transparent,rgba(0,0,0,.5)),url(/Images/prakash-story.jpg);
+}
+.main-content .story3
+{
+    background-image: linear-gradient(transparent,rgba(0,0,0,.5)),url(/Images/amul-story.jpg);
+    background-position: 65%;
+}
+.main-content .story4
+{
+    background-image: linear-gradient(transparent,rgba(0,0,0,.5)),url(/Images/tamil-story.jpg);
+}
+.write-post-content 
+{
+    /* display: flex;
+    align-items: center; */
+    padding: 10px 20px;
+    background-color: #fff;
+    margin-top: 10px;
+    border-radius: 8px;
+}
+.write-post-content .control
+{
+    display: flex;
+    align-items: center;
+}
+.write-post-content .user-profile img
+{
+    width: 40px;
+    border-radius: 50%;
+}
+.write-post-content .name
+{
+    padding-left: 10px;
+    font-weight: 500;
+}
+.write-post-content .name select
+{
+    font-size: .7rem;
+    border: none;
+    outline: none;
+    background-color: none;
+}
+.write-post-content .name option
+{
+    border: none;
+    outline: none;
+    overflow: none;
+}
+.write-post-content textarea
+{
+    height: 60px;
+    width: 500px;
+    margin-left: 50px;
+    outline: none;
+    background-color: none;
+    padding: 5px;
+    resize: none ;
+    border: none;
+    border-bottom: 1px solid #626262;
+}
+
+
+.add-post-link 
+{
+    display: flex;
+    align-items: center;
+    padding-left: 50px;
+}
+.add-post-link a
+{
+    display: flex;
+    align-self: center;
+    height: 100%;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    text-decoration: none;
+    padding-right: 15px;
+    color: #3f3f3f;
+    
+
+}
+.add-post-link img
+{
+    height: 20px;
+    padding-right: 10px;
+}
+.write-post-content .control .name span
+{
+    font-size: .8rem;
+    color: #656565;
+}
+.write-post-content p
+{
+    color: #636363;
+}
+.write-post-content i
+{
+    color: #3f3f3f;
+    font-style: none;
+    font-weight: 600;
+}
+.write-post-content .post-img
+{
+    width: 100%;
+    margin-top: 5px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+.post-icon
+{
+    display: flex;
+    justify-content: space-between;
+}
+.post-icon .left-icon 
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.post-icon .left-icon div
+{
+    display: inline-flex;
+    padding-right: 30px;
+
+}
+.post-icon .left-icon img
+{
+    width: 20px;
+    margin-right: 6px;
+}
+.three-dot
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.button 
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.button button
+{
+    padding: 5px 10px;
+    background: transparent;
+    border: 1px solid #8f8f8f;
+    border-radius: 4px;
+}
+
+
+
+
+/* right-sidebar -------------------------------------------------------------------------------*/
+.right-sidebar 
+{
+    background-color: #fff;
+    border-radius: 8px;
+}
+.right-sidebar .events
+{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 10px 20px;
+    align-items: center;
+}
+.right-sidebar .events h4
+{
+    color: #3f3f3f;
+    font-weight: 600;
+}
+.right-sidebar .events a
+{
+    text-decoration: none;
+    color: #1876f2;
+    font-size: .8rem;
+}
+.right-sidebar .date-details
+{
+    display: flex;
+}
+.right-sidebar .date-details .left
+{
+    
+    margin-left: 10px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,.2);
+    text-align: center;
+    height: 60px;
+    width: 60px;
+    border-radius: 8px;
+    margin-right: 10px;
+    margin-bottom: 15px;
+}
+.right-sidebar .date-details .left h4
+{
+    padding-top: 10px;
+}
+.right-sidebar .date-details .left p
+{
+   margin-top: 15px;
+   width: 100%;
+   background: #1876f2;
+   border-radius: 0 0 8px 8px;
+   color:#fff;
+}
+.right-sidebar .date-details .right h4 
+{
+    color: #3f3f3f;
+}
+.right-sidebar .date-details .right p
+{
+    font-size: .9rem;
+} 
+.right-sidebar .date-details .right a
+{
+    font-size: .9rem;
+    text-decoration: none;
+    color: #1876f2;
+}
+#ad
+{
+    width: 100%;
+    padding:0 10px;
+    border-radius:15px;
+}
+.user-online 
+{
+    padding:0 10px;
+    display: flex;
+    align-items: center;
+}
+.user-online .profile img
+{
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 5px;
+}
+.user-online .profile::after
+{
+    top: unset;
+    /* right: 0; */
+    bottom: 5px;
+}
+.user-online a 
+{
+    padding-left: 10px;
+    text-decoration: none;
+    color: #3f3f3f;
+}
+.footer p
+{
+    text-align: center;
+    width: 100%;
+    color: #3f3f3f;
+    padding-bottom: 5px;
+    margin-top: 5px;
+}
